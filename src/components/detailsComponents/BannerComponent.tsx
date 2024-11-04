@@ -42,7 +42,9 @@ const BannerComponent = ({ mediaId }: { mediaId: string }) => {
           vote_average={movieData.vote_average}
         />
       ) : (
-        "Cargando"
+        <div className="absolute top-[50%] left-[50%]">
+          <span className="loading loading-spinner text-primary"></span>
+        </div>
       )}
     </>
   );

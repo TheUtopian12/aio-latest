@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { FaArrowLeft } from "react-icons/fa6";
 
 interface BannerComponentProps {
   poster_path: string;
@@ -18,7 +21,7 @@ const BannerComponentDetails = ({
   overview,
 }: BannerComponentProps) => {
   const [isPlaying, setIsPlaying] = useState(false); // Estado para controlar la reproducción
-
+  const router = useRouter();
   const handlePlayClick = () => {
     setIsPlaying(!isPlaying); // Cambiar el estado a verdadero al hacer clic
   };
@@ -100,6 +103,13 @@ const BannerComponentDetails = ({
           ></iframe>
         </div>
       )}
+
+      <div className="absolute top-10 left-5 pt-10 px-10 space-x-4 text-center sm:text-left">
+        <button className="btn btn-error" onClick={() => router.back()}>
+          {" "}
+          <FaArrowLeft />{" "}
+        </button>
+      </div>
     </div>
   );
 };
