@@ -1,18 +1,32 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getPopularMovies } from "@/lib/api";
+import { getPopularMovies, movieByGender } from "@/lib/api";
 import { CardMovie } from "../main/CardMovie";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
-export default function GridMovies() {
+export default function GridMovies({
+  param,
+}: {
+  param: { categoryId: string };
+}) {
+  const route = usePathname();
+  console.log(route);
   const [movies, setMovies] = useState([]); // Estado inicial vacío
-
+  const { categoryId } = param;
   const fetchMovies = async () => {
     try {
-      const popularMovies = await getPopularMovies(); // Llama a la API
-      setMovies(popularMovies); // Actualiza el estado con las películas
+      if (route === "/trending-movies") {
+        const popularMovies = await getPopularMovies(); // Llama a la API
+        setMovies(popularMovies);
+      } else {
+        const popularMovies = await movieByGender(Number(categoryId)); // Llama a la API
+        setMovies(popularMovies);
+      }
+
+      // Actualiza el estado con las películas
     } catch (error) {
       console.error("Error al obtener las películas populares:", error);
     }
@@ -24,6 +38,7 @@ export default function GridMovies() {
   }, []);
 
   // Se ejecuta cuando cambia el valor de `movies`
+
   return (
     <div className="p-10 px-2">
       <Link

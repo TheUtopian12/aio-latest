@@ -4,45 +4,42 @@ export default {
       title: "Trending",
       url: `trending-movies`,
     },
-    fetchTopRated: {
-      title: "Top Rated",
-      url: `top-rated`,
-    },
+   
     fetchActionMovies: {
       title: "Action",
-      url: `action`,
+      url: `28`,
     },
     fetchComedyMovies: {
       title: "Comedy",
-      url: `comedy`,
+      url: `35`,
     },
     fetchHorrorMovies: {
       title: "Horror",
-      url: `horror`,
+      url: `27`,
     },
     fetchRomanceMovies: {
       title: "Romance",
-      url: `romance`,
+      url: `10749`,
     },
     fetchMystery: {
       title: "Mystery",
-      url: `mystery`,
+      url: `9648`,
     },
     fetchSciFi: {
       title: "SciFi",
-      url: `scifi`,
+      url: `878`,
     },
     fetchWester: {
       title: "Wester",
-      url: `wester`,
+      url: `37`,
     },
     fetchAnimation: {
       title: "Animation",
-      url: `animation`,
+      url: `16`,
     },
     fetchtTv: {
       title: "TV",
-      url: `tv`,
+      url: `10770`,
       
     },
   };

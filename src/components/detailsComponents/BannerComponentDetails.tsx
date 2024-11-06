@@ -95,8 +95,8 @@ const BannerComponentDetails = ({
           <iframe
             width="80%"
             height="80%"
-            src="https://www.youtube.com/embed/HyIyd9joTTc" // Cambiar a la URL del video de YouTube
-            title="Video de YouTube"
+            src="http://stream.dssmedia.org:8181/movies/7250-1.mp4" // Cambiar a la URL del video de YouTube
+            title="Video test"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>

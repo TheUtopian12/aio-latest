@@ -1,10 +1,8 @@
-import React from "react";
 import GridMovies from "@/components/trendingMovies/GridMovies";
-const TrendingMovies = async ({
-  params,
-}: {
-  params: { categoryId: string };
-}) => {
+import React from "react";
+
+const Category = async ({ params }: { params: { categoryId: string } }) => {
+  // Asegurarse de que params.categoryId está en el formato correcto
   const param = { categoryId: params.categoryId };
 
   return (
@@ -14,4 +12,4 @@ const TrendingMovies = async ({
   );
 };
 
-export default TrendingMovies;
+export default Category;

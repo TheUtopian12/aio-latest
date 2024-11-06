@@ -41,6 +41,7 @@ const BannerMovieRandom = ({ movies }: { movies: Movie[] }) => {
             width={9000}
             height={9000}
             quality={100}
+            placeholder="empty"
             priority
             className="max-w-full h-[800px] opacity-65 "
             alt="Imagen de la película"
@@ -94,7 +95,7 @@ const BannerMovieRandom = ({ movies }: { movies: Movie[] }) => {
             </button>
 
             <Link
-              href={`/${movieList[currentIndex]?.id}`}
+              href={`/media/${movieList[currentIndex]?.id}`}
               className="flex items-center justify-center rounded-full h-10 w-10 bg-gray-500 hover:bg-orange-600 "
             >
               <span className="text-xl text-white flex">i</span>
