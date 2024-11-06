@@ -5,6 +5,7 @@ import Image from "next/image";
 import "./BannerMovieStyles.css";
 import { movieById } from "@/lib/api";
 import BannerComponentDetails from "./BannerComponentDetails";
+import Loader from "../ui/Loader";
 
 interface PropsMovie {
   title: string;
@@ -42,9 +43,7 @@ const BannerComponent = ({ mediaId }: { mediaId: string }) => {
           vote_average={movieData.vote_average}
         />
       ) : (
-        <div className="absolute top-[50%] left-[50%]">
-          <span className="loading loading-spinner text-primary"></span>
-        </div>
+        <Loader />
       )}
     </>
   );

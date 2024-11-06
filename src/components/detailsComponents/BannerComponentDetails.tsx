@@ -50,7 +50,7 @@ const BannerComponentDetails = ({
           <span className="text-white text-md text-justify">{overview}</span>
         </div>
         <div className="text-center py-4 text-md text-white">
-          {release_date} / {genres.join(", ")}{" "}
+          {release_date}
         </div>
 
         <div className="flex justify-center space-x-2">

@@ -25,7 +25,7 @@ export default function GridMovies() {
 
   // Se ejecuta cuando cambia el valor de `movies`
   return (
-    <div className="p-10">
+    <div className="p-10 px-2">
       <Link
         href={"/main"}
         className="flex items-center pt-10 px-10 space-x-4 text-center sm:text-left"
@@ -36,8 +36,11 @@ export default function GridMovies() {
         </button>
       </Link>
       <div
-        className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 whitespace-nowrap 
-                    overflow-x-scroll no-scrollbar md:gap-9 lg:gap-10 justify-items-center"
+        className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 whitespace-nowrap 
+                    overflow-x-scroll no-scrollbar md:gap-9 lg:gap-10 justify-items-center
+                    
+                    
+                    "
       >
         {movies.map(
           (movie: {
